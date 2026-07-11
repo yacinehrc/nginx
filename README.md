@@ -87,27 +87,17 @@ services:
 ### Démarrage du conteneur
 
 ```bash
-sudo docker <img width="1919" height="907" alt="Capture d&#39;écran 2026-07-11 093432" src="https://github.com/user-attachments/assets/4657b6c0-c8eb-4dd1-9823-2b34bbe9f171" />
-compose up -d
-```
-
-```bash
 sudo docker compose up -d
 ```
-
-![Uploading Capture d'écran 2026-07-11 093432.png…]()
+<img width="1919" height="907" alt="Capture d&#39;écran 2026-07-11 093432" src="https://github.com/user-attachments/assets/4657b6c0-c8eb-4dd1-9823-2b34bbe9f171" />
 
 Docker télécharge l'image Nginx, crée le réseau `srv-nginx_default` et démarre le conteneur `serveur-web`.
-
-![Pull complet et conteneur démarré](https://github.com/user-attachments/assets/a8df39cb-3f1a-4ad1-917e-dbd29ffc6845)
 
 ### Vérification de la structure de fichiers
 
 Le dossier `srv-nginx` contient le `docker-compose.yml` et le dossier `html`.
 
-![Dossier personnel avec srv-nginx](https://github.com/user-attachments/assets/823bdd37-bb89-4fe2-8e4b-b270627cac9b)
-
-![Contenu de srv-nginx](https://github.com/user-attachments/assets/9c3274d6-c659-473c-8475-a03ef9d31438)
+<img width="1919" height="907" alt="Capture d&#39;écran 2026-07-11 093852" src="https://github.com/user-attachments/assets/811df8de-8491-46e1-b6e2-67528199c58e" />
 
 ### Création de la page HTML
 
@@ -115,17 +105,27 @@ Le dossier `srv-nginx` contient le `docker-compose.yml` et le dossier `html`.
 nano ~/srv-nginx/html/index.html
 ```
 
-![Commande nano index.html](https://github.com/user-attachments/assets/8201a221-8109-4a15-a83c-ce1ff8660db1)
+<img width="1919" height="910" alt="Capture d&#39;écran 2026-07-11 094136" src="https://github.com/user-attachments/assets/282b532e-2e68-46a3-8b5c-96e757c654ba" />
 
-![Contenu de index.html](https://github.com/user-attachments/assets/ef80c98d-eb14-4294-aa2c-e59ed7c2acd8)
+Vous y mettez ensuite le code HTML que vous souhaitez.
+
+<img width="1919" height="903" alt="Capture d&#39;écran 2026-07-11 094543" src="https://github.com/user-attachments/assets/eddda6e6-0a2b-4e5d-9b12-b51c0f189561" />
+
+<img width="1919" height="908" alt="Capture d&#39;écran 2026-07-11 094242" src="https://github.com/user-attachments/assets/ca5db8d1-01fc-4788-97fc-02011694f8f7" />
 
 Le fichier CSS est également créé pour styliser la page de validation.
 
-![Contenu de style.css](https://github.com/user-attachments/assets/e9b41493-2eaf-48f2-a516-ab72cabf6bab)
+```bash
+nano ~/srv-nginx/html/style.css
+```
+
+<img width="1919" height="903" alt="Capture d&#39;écran 2026-07-11 094543" src="https://github.com/user-attachments/assets/575b6908-0abf-4d60-9fa6-28ab2fb73e72" />
+
+<img width="1919" height="907" alt="Capture d&#39;écran 2026-07-11 094335" src="https://github.com/user-attachments/assets/80127b77-f90c-490d-8dec-3c9a161740de" />
 
 Le dossier `html` contient les deux fichiers servis par Nginx.
 
-![Dossier html avec index.html et style.css](https://github.com/user-attachments/assets/bc8a9a33-52ac-4d77-b0b5-5048b91bca8f)
+<img width="1919" height="907" alt="Capture d&#39;écran 2026-07-11 094335" src="https://github.com/user-attachments/assets/3bb2afdb-0df6-47e4-b0e2-3e523a71ca9f" />
 
 ### Récupération de l'adresse IP
 
@@ -133,17 +133,19 @@ Le dossier `html` contient les deux fichiers servis par Nginx.
 ip a
 ```
 
-![Commande ip a](https://github.com/user-attachments/assets/9f195ced-e3c7-4f5e-afad-5ce9ef4bdd18)
+<img width="1919" height="903" alt="Capture d&#39;écran 2026-07-11 094617" src="https://github.com/user-attachments/assets/fffe4fff-899e-4f2f-a620-7c3cd0b435cd" />
 
 L'adresse IP de la VM est `192.168.91.129`, le serveur est accessible sur `http://192.168.91.129:8080`.
 
-![Résultat ip a avec l'IP 192.168.91.129](https://github.com/user-attachments/assets/79858e9d-8960-4a48-83ea-06167d58982e)
+<img width="1919" height="913" alt="Capture d&#39;écran 2026-07-11 094630" src="https://github.com/user-attachments/assets/fd2bff87-86ac-46aa-a9ad-934e4700699e" />
 
 ### Résultat final — Page servie par Nginx
 
 La page HTML s'affiche dans le navigateur à l'adresse `http://192.168.91.129:8080`, confirmant que le serveur Nginx fonctionne correctement dans son conteneur Docker.
 
-![Page web affichée dans le navigateur](https://github.com/user-attachments/assets/ace91972-1852-4317-92f7-1ada795bf348)
+<img width="182" height="37" alt="Capture d&#39;écran 2026-07-11 094704" src="https://github.com/user-attachments/assets/d8563198-d707-447b-aa1f-1666205f6638" />
+
+<img width="1919" height="988" alt="Capture d&#39;écran 2026-07-11 094717" src="https://github.com/user-attachments/assets/1416fc9d-9d07-49d6-afaf-46da2dda98c2" />
 
 ---
 
