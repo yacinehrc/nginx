@@ -107,6 +107,7 @@ nano ~/srv-nginx/html/index.html
 
 <img width="1919" height="910" alt="Capture d&#39;écran 2026-07-11 094136" src="https://github.com/user-attachments/assets/282b532e-2e68-46a3-8b5c-96e757c654ba" />
 
+
 Vous y mettez ensuite le code HTML que vous souhaitez.
 
 <img width="1919" height="903" alt="Capture d&#39;écran 2026-07-11 094543" src="https://github.com/user-attachments/assets/eddda6e6-0a2b-4e5d-9b12-b51c0f189561" />
@@ -120,8 +121,6 @@ nano ~/srv-nginx/html/style.css
 ```
 
 <img width="1919" height="903" alt="Capture d&#39;écran 2026-07-11 094543" src="https://github.com/user-attachments/assets/575b6908-0abf-4d60-9fa6-28ab2fb73e72" />
-
-<img width="1919" height="907" alt="Capture d&#39;écran 2026-07-11 094335" src="https://github.com/user-attachments/assets/80127b77-f90c-490d-8dec-3c9a161740de" />
 
 Le dossier `html` contient les deux fichiers servis par Nginx.
 
