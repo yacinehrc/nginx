@@ -1,6 +1,6 @@
 # Serveur Web Nginx — Docker
 
-![Bureau Ubuntu](https://github.com/user-attachments/assets/befcf761-b290-4b41-9631-2aa6c15ab36c)
+<img width="1919" height="988" alt="Capture d&#39;écran 2026-07-11 094717" src="https://github.com/user-attachments/assets/cd145866-2ecc-4aef-9bcd-57d304348e03" />
 
 > Déploiement d'un serveur web Nginx conteneurisé via Docker Compose sur une machine virtuelle Ubuntu — avec page HTML/CSS personnalisée servie en local sur le port 8080.
 
@@ -8,7 +8,9 @@
 
 ## Introduction
 
-Ce projet consiste à déployer un **serveur web Nginx** dans un conteneur **Docker** sur une machine virtuelle **Ubuntu**, en utilisant **Docker Compose** pour orchestrer le service. L'objectif était de découvrir la conteneurisation, de comprendre le fonctionnement d'un serveur web et de servir une page HTML statique accessible depuis le navigateur via l'adresse IP de la VM. Le projet a été réalisé entièrement en ligne de commande.
+Ce projet consiste à déployer un **serveur web Nginx** dans un conteneur **Docker** sur une machine virtuelle (ici, le projet sera réalisé avec la distribution **Ubuntu**), en utilisant **Docker Compose** pour orchestrer le service. L'objectif était de découvrir la conteneurisation, de comprendre le fonctionnement d'un serveur web et de servir une page HTML statique accessible depuis le navigateur via l'adresse IP de la VM. Le projet a été réalisé entièrement en ligne de commande.
+
+> 💡 **Prérequis — Installation d'Ubuntu :** Si vous partez de zéro, un guide complet d'installation d'Ubuntu Desktop (en VM VMware ou sur PC physique) est disponible ici : **[yacinehrc/Ubuntu-GNOME-Desktop](https://github.com/yacinehrc/Ubuntu-GNOME-Desktop)**
 
 ---
 
@@ -32,9 +34,7 @@ Avant toute installation, mise à jour des paquets du système Ubuntu.
 sudo apt update && sudo apt upgrade -y
 ```
 
-![Commande apt update](https://github.com/user-attachments/assets/8f6740e9-2e0b-49ff-86d6-041d5fd807a4)
-
-![Résultat apt upgrade](https://github.com/user-attachments/assets/5daf1de1-054a-4d51-8613-59f78b84b28f)
+<img width="1919" height="912" alt="Capture d&#39;écran 2026-07-11 092844" src="https://github.com/user-attachments/assets/6ae07359-58aa-4f40-a660-32864dc7e682" />
 
 ### Installation de Docker et Docker Compose
 
@@ -42,9 +42,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install docker.io docker-compose -y
 ```
 
-![Commande installation Docker](https://github.com/user-attachments/assets/3d0c05e0-935f-49d7-84e0-f78af374e746)
-
-![Docker installé avec succès](https://github.com/user-attachments/assets/ad250183-d11c-4495-b095-0c1b54563382)
+<img width="1919" height="913" alt="Capture d&#39;écran 2026-07-11 093017" src="https://github.com/user-attachments/assets/532d8921-fe0b-42da-975c-edc3e01c7595" />
 
 ### Création de la structure de dossiers
 
@@ -54,9 +52,11 @@ cd ~/srv-nginx
 mkdir -p html
 ```
 
-![Création du dossier srv-nginx](https://github.com/user-attachments/assets/ec6cd28f-3a56-4751-9901-b368cc7d3eb6)
+<img width="1919" height="909" alt="Capture d&#39;écran 2026-07-11 093046" src="https://github.com/user-attachments/assets/6a033d9c-81e5-496d-a255-46293f59b31b" />
 
-![Navigation dans srv-nginx](https://github.com/user-attachments/assets/02de3d14-83d6-49d0-a122-f8a6c011dcad)
+<img width="1919" height="916" alt="Capture d&#39;écran 2026-07-11 093106" src="https://github.com/user-attachments/assets/f3feb777-a828-442f-8b2d-ce4ba0ca509a" />
+
+<img width="1919" height="903" alt="Capture d&#39;écran 2026-07-11 093124" src="https://github.com/user-attachments/assets/db981d5f-4147-43cf-a471-19e4784c219b" />
 
 ### Configuration du docker-compose.yml
 
@@ -66,7 +66,7 @@ nano docker-compose.yml
 
 Le fichier `docker-compose.yml` définit le service Nginx avec le port, le volume et la politique de redémarrage.
 
-![Contenu du docker-compose.yml](https://github.com/user-attachments/assets/c2b61824-8e61-4150-8c7c-58d6990d4920)
+<img width="1919" height="909" alt="Capture d&#39;écran 2026-07-11 093155" src="https://github.com/user-attachments/assets/44a64570-68e9-4bd1-90e6-df2c1da5943e" />
 
 ```yaml
 version: '3.8'
@@ -82,19 +82,20 @@ services:
     restart: always
 ```
 
+<img width="1919" height="918" alt="Capture d&#39;écran 2026-07-11 093329" src="https://github.com/user-attachments/assets/064caee5-6cec-4889-a19c-7767fa5d4cb1" />
+
 ### Démarrage du conteneur
 
 ```bash
-sudo docker-compose up -d
+sudo docker <img width="1919" height="907" alt="Capture d&#39;écran 2026-07-11 093432" src="https://github.com/user-attachments/assets/4657b6c0-c8eb-4dd1-9823-2b34bbe9f171" />
+compose up -d
 ```
 
 ```bash
 sudo docker compose up -d
 ```
 
-![Lancement docker-compose up -d](https://github.com/user-attachments/assets/ca61638f-9d74-4882-86d9-da54964cf6f3)
-
-![Lancement docker compose up -d](https://github.com/user-attachments/assets/195bd9a3-1add-45bc-baf0-22760004639c)
+![Uploading Capture d'écran 2026-07-11 093432.png…]()
 
 Docker télécharge l'image Nginx, crée le réseau `srv-nginx_default` et démarre le conteneur `serveur-web`.
 
